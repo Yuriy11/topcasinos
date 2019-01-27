@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% if latest_casino_list %}
+
+        {% for casino in latest_casino_list %}
+
+            <a href="/casino/{{ casino.id }}/" style="text-decoration : none">
+            <div class="row top-buffer btn-light">
+
+                <div class="col">
+                    <img src="{{ casino.casino_icon.url }}" alt="img" width="200px">
+                </div>
+                <div class="col">
+                    <h4>{{ casino.casino_name }}</h4>
+                    <p>{{ casino.casino_description }}</p>
+                </div>
+            </div>
+            </a>
+        {% endfor %}
+    {% else %}
+        <p>No casinos are available.</p>
+    {% endif %}{% endblock %}

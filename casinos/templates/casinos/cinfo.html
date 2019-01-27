@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        <li>{{ casino.date_added }}</li>
+        <li><img src = "{{ casino.casino_icon.url }}"alt="img" width="200px"></li>
+        <li>{{ casino.casino_name }}</li>
+        <li>{{ casino.casino_description }}</li>
+        <li>{{ casino.software }}</li>
+        <li>{{ casino.os_supported }}</li>
+        <li>{{ casino.languages }}</li>
+        <li>{{ casino.currencies }}</li>
+        <li>{{ casino.deposit_methods }}</li>
+        <li>{{ casino.minimal_deposit }}</li>
+        <li>{{ casino.withdrawal_methods }}</li>
+        <li>{{ casino.withdrawal_limits }}</li>
+        <li>{{ casino.withdrawal_min_amount }}</li>
+        <li>{{ casino.established_on }}</li>
+        <li>{{ casino.withdrawal_min_amount }}</li>
+        <li>{{ casino.established_on }}</li>
+        <li>{{ casino.jurisdiction }}</li>
+        <li>{{ casino.sister_casinos }}</li>
+        <li>{{ casino.casino_link }}</li>
+        <li>{{ casino.rating_ours }}</li>
+        <li>{{ casino.rating_users }}</li>
+        </li>
+    </ul>{% endblock %}

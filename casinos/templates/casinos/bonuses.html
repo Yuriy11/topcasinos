@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if latest_bonus_list %}
+        {% for bonus in latest_bonus_list %}
+            <div class="row top-buffer btn-light">
+
+                <div class="col">
+                    <img src="{{ bonus.casino.casino_icon.url }}" alt="img" width="200px">
+                </div>
+                <div class="col">
+                    <a href="/bonus/{{ bonus.id }}/" style="text-decoration : none"><h4>{{ bonus.bonus_name }}</h4></a>
+                    {{ bonus.bonus_description }}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No bonuses are available.</p>
+    {% endif %}
+{% endblock %}

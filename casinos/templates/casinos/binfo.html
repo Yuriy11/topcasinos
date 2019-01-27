@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        <li><a href="/casino/{{ casino.id }}/">{{ casino.casino_name }}</a></li>
+        <li>{{ bonus.date_added }}</li>
+        <li>{{ bonus.bonus_name }}</li>
+        <li>{{ bonus.bonus_description }}</li>
+        <li>{{ bonus.bonus_amount }}</li>
+        <li>{{ bonus.bonus_code }}</li>
+        <li>{{ bonus.valid_for }}</li>
+        <li>{{ bonus.min_deposit }}</li>
+        <li>{{ bonus.max_deposit }}</li>
+        <li>{{ bonus.games }}</li>
+        <li>{{ bonus.additional_information }}</li>
+
+    </ul>{% endblock %}
